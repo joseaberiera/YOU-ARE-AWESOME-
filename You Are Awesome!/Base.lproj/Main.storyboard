@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait" appearance="light"/>
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,32 +13,46 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="You_Are_Awesome_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-vw-alB">
-                                <rect key="frame" x="10" y="20" width="300" height="170"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
-                                <color key="textColor" red="1" green="0.024170271520000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CMu-Qb-wmy">
-                                <rect key="frame" x="40" y="245" width="240" height="316"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CY2-54-LFw">
-                                <rect key="frame" x="88" y="198" width="145" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CY2-54-LFw">
+                                <rect key="frame" x="88" y="198" width="160" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="Show Message"/>
                                 <connections>
                                     <action selector="messageButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yt3-fK-RSA"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CMu-Qb-wmy">
+                                <rect key="frame" x="16" y="245" width="304" height="402"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7gf-vw-alB">
+                                <rect key="frame" x="16" y="20" width="304" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="LyE-fn-XZN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                                <color key="textColor" red="1" green="0.024170271520000002" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CY2-54-LFw" firstAttribute="centerX" secondItem="CMu-Qb-wmy" secondAttribute="centerX" id="1ly-KX-wW2"/>
+                            <constraint firstItem="CY2-54-LFw" firstAttribute="top" secondItem="7gf-vw-alB" secondAttribute="bottom" constant="78" id="67a-E4-sc9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CMu-Qb-wmy" secondAttribute="bottom" constant="20" id="9Xq-Pi-ZLG"/>
+                            <constraint firstItem="CMu-Qb-wmy" firstAttribute="top" secondItem="CY2-54-LFw" secondAttribute="bottom" constant="8" symbolic="YES" id="C4i-OE-cGj"/>
+                            <constraint firstItem="CY2-54-LFw" firstAttribute="centerX" secondItem="7gf-vw-alB" secondAttribute="centerX" id="CYv-JM-dcv"/>
+                            <constraint firstItem="CMu-Qb-wmy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="IMo-Pj-hcT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="CMu-Qb-wmy" secondAttribute="trailing" constant="16" id="Ib2-4W-Wro"/>
+                            <constraint firstAttribute="trailing" secondItem="7gf-vw-alB" secondAttribute="trailing" constant="16" id="KZ1-cO-mKh"/>
+                            <constraint firstItem="7gf-vw-alB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="Txt-PI-f89"/>
+                            <constraint firstItem="7gf-vw-alB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="VRQ-ib-D2l"/>
+                            <constraint firstItem="CMu-Qb-wmy" firstAttribute="top" secondItem="CY2-54-LFw" secondAttribute="bottom" constant="8" id="cf5-Ld-n4f"/>
+                            <constraint firstItem="CY2-54-LFw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="88" id="gpe-aw-tDe"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="CMu-Qb-wmy" id="4bw-98-5V2"/>
@@ -47,7 +61,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.75" y="80.281690140845072"/>
+            <point key="canvasLocation" x="18.399999999999999" y="79.610194902548727"/>
         </scene>
     </scenes>
     <resources>
